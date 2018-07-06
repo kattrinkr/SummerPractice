@@ -12,20 +12,94 @@
     font-family: 'Lato Black';
     src: url(../[fonts]/Lato/Lato-Black.ttf) format('truetype');
 }
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.wrapper {
+body {
     margin: 0 auto;
     width: 100%;
     height: auto;
+    background: url(../[pictures]/Background/light.png) no-repeat top center,
+                url(../[pictures]/Background/bck.png) no-repeat;
 }
 
+.header {
+    width: 1170px;
+    height: 320px;
+    margin: 0 auto;
+    margin-top: 97px;   
+}
 
-p {
+.header__logo {
+    width: 500px;
+    height: 220px;
+    margin: 0 auto;
+    background-color: rgb(231, 204, 0);
+}
+
+.header__logo-link {
+    width: 220px;
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+}
+
+.header__logo-link:hover {
+    cursor: pointer;
+}
+
+.header__logo-img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 33px;
+}
+
+.header__logo-name {
     font-family: 'Fjalla One';
+    font-size: 41px;
+    color: rgb(39, 41, 70);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 12px;
+    word-spacing: -3px;
+    letter-spacing: 0.15px;
 }
+
+.header__menu {
+    width: 1170px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: rgb(231, 204, 0);
+}
+
+.header__nav {
+    width: 502px;
+    height: 98px;
+    margin: 0 auto;
+}
+
+.header__nav a {
+    width: 98px;
+    height: 98px;
+    display: block;
+    float: left;
+    background-color: #dec400;
+    border: 2px solid #e8d64d;
+    border-right: none;
+    border-bottom: none;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Fjalla One";
+    color: rgb(49, 51, 82);
+    text-transform: uppercase;
+    line-height: 98px;
+    text-align: center;  
+    letter-spacing: 0.05px;
+}
+
+.header__nav-contact {
+    border-right: 2px solid #e8d64d !important;
+}
+
+.header__nav a:hover {
+    cursor: pointer;
+    background-color: #9b8a0759; 
+} 
