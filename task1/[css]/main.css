@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Fjalla One';
+    src: url(../[fonts]/Fjalla_One/FjallaOne-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Regular';
+    src: url(../[fonts]/Lato/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Black';
+    src: url(../[fonts]/Lato/Lato-Black.ttf) format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+
+p {
+    font-family: 'Fjalla One';
+}
