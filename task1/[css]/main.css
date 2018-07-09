@@ -12,12 +12,13 @@
     font-family: 'Lato Black';
     src: url(../[fonts]/Lato/Lato-Black.ttf) format('truetype');
 }
+
 body {
     margin: 0 auto;
     width: 100%;
     height: auto;
     background: url(../[pictures]/Background/light.png) no-repeat top center,
-                url(../[pictures]/Background/bck.png) no-repeat;
+                url(../[pictures]/Background/bck.png);
 }
 
 .header {
@@ -101,5 +102,201 @@ body {
 
 .header__nav a:hover {
     cursor: pointer;
-    background-color: #9b8a0759; 
+    background-color: #9b8a0759;
+}
+
+.main {
+    width: 1170px;
+    height: 1389.5px;
+    margin: 0 auto;
+}
+
+.main__preview {
+    height: 379.5px;
+}
+
+.main__left, .main__right, .main__middle, .main__about, .main__history, .main__user {
+    height: 379.5px;
+    width: 335px;
+    float: left;
+}
+
+.main__middle, .main__history {
+    width: 500px;
+}
+
+.main__bird, .main__jesus, .main__church, .main__glass {
+    height: 189.7px;
+    background-color: #313352;
+}
+
+.main__middle {
+    background: url(../[pictures]/Tile/cross.png) no-repeat;
+}
+
+.main__jesus, .main__church {
+    background-color: #272946;
+}
+
+.main__preview .main__search {
+    background-color: #5a5c75;
+    height: 34px;
+    width: 34px;
+    margin-left: 301px; 
+    margin-bottom: 23px; 
+}
+
+.main__preview .main__search:hover {
+    cursor: pointer;
+    background-color: #2c4d5a2c;
+}
+
+.main__preview i {
+    font-size: 18px;
+    color: #adaeba;
+    font-family: "FontAwesome"; 
+    display: block;
+    padding: 8px;
+}
+
+.main__preview img {
+    margin-left: 32px;
+    width: 50px;
+    height: 50px;
 } 
+
+.main__jesus img {
+    margin-left: 30px;
+    height: 52px;
+    width: 60px;
+}
+
+.main__church img {
+    margin-left: 28px;
+    height: 52px;
+    width: 40px;
+}
+
+.main__glass img {
+    margin-left: 32px;
+    height: 50px;
+    width: 28px;
+    margin-top: -2px;
+}
+
+.main__preview p {
+    font-size: 15px;
+    font-family: 'Lato Regular';
+    color: rgb(231, 204, 0);
+    line-height: 1.2;
+    word-spacing: 1.5px;
+    letter-spacing: -1px;
+    margin-top: 3px;
+    padding-left: 30px;
+}
+
+.main__preview h2 {
+    font-size: 22px;
+    font-family: "Fjalla One";
+    color: rgb(231, 204, 0);
+    text-transform: uppercase;
+    line-height: 1.2;
+    word-spacing: -1px;
+    letter-spacing: 0.6px;
+    margin-top: -10px;
+    padding-left: 28px;    
+}
+
+.main__jesus p, .main__church p{
+    margin-top: 1px;
+    padding-left: 30px;
+    word-spacing: -1px;
+    letter-spacing: -0.6px;
+}
+
+.main__glass p {
+    margin-top: 5px;
+    padding-left: 30px;
+    letter-spacing: -0.9px;
+}
+
+.main__middle .main__slogan {
+    height: 150px;
+    width: 300px;
+    vertical-align: bottom;
+    margin: 0 auto;
+    margin-top: 255px;
+}
+
+.main__middle h2, .main__middle h3 {
+    font-size: 22px;
+    font-family: "Fjalla One";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    word-spacing: -0.8px;
+    letter-spacing: 0.5px;
+    padding-left: 2px;
+}
+
+.main__middle h3 {
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.main__middle input {
+    background-color: #dec400;
+    width: 90px;
+    height: 36px;
+    font-size: 15px;
+    font-family: "Fjalla One";
+    color: rgb(39, 41, 70);
+    border: none;
+    margin: 9px 105px;     
+}
+
+.main__info {
+    height: 1010px;
+}
+
+.main__about, .main__history, .main__user {
+    height: 1010px;
+}
+
+.main__history {
+    background-color: rgb(231, 204, 0);
+}
+
+.footer {
+    width: 1170px;
+    height: 115px;
+    margin: 0 auto;
+    
+}
+
+.footer p, .footer h2 {
+    font-size: 15px;
+    font-family: 'Fjalla One';
+    color: rgb(119, 121, 134);
+    line-height: 1.733;
+    text-align: center;
+    margin: 0;
+}
+
+.footer p:first-child {
+    padding-top: 24px;
+}
+
+.footer p:nth-child(2) {
+    display: block;
+    height: 16px;
+}
+
+.footer h2 {
+    font-size: 22px;
+    letter-spacing: 1.3px;
+    color: rgb(231, 204, 0);
+}
