@@ -270,6 +270,301 @@ body {
     background-color: rgb(231, 204, 0);
 }
 
+.main__history h2 {
+    font-size: 24px;
+    font-family: "Fjalla One";
+    color: rgb(49, 51, 82);
+    text-transform: uppercase;
+    line-height: 1.2; 
+    letter-spacing: -0.5px;
+    margin-bottom: 0px;
+    height: 23px;
+}
+
+.main__history p {
+    font-size: 14px;
+    font-family: "Lato";
+    color: rgb(81, 84, 110);
+    line-height: 1.6; 
+    margin-bottom: 21px;  
+}
+
+.main__egestas, .main__fusce, .main__donec {
+    margin: 40px 35px;   
+    width: 431px;
+    height: 292px;
+    border-bottom: 1px solid #ae9a41;
+    margin-bottom: 30px;
+}
+
+.main__egestas-img {
+    float: left;
+    overflow: hidden;
+    height: 120px;
+    width: 130px;
+    margin-right: 30px;
+}
+
+.main__egestas img {
+    height: 170px;
+    width: 170px;
+    margin: -13px;
+}
+
+.main__egestas p+p {
+    margin-bottom: 17px;
+} 
+
+.main__about h2, .main__user h2 {
+    font-size: 24px;
+    font-family: "Fjalla One";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.main__info h4 {
+    font-size: 14px;
+    font-family: "Lato";
+    color: rgb(231, 204, 0);
+    text-decoration: underline;
+    line-height: 1.714; 
+    margin-top: 22px;  
+    margin-bottom: 10px; 
+}
+
+.main__about p, .main__user span, .main__user input, tr td:last-child, .main__user-message {
+    font-size: 14px;
+    font-family: "Lato";
+    color: rgb(119, 121, 134);
+    line-height: 1.571;   
+}
+
+.main__date {
+    height: 70px;
+    width: 70px;
+    float: left;
+    margin: 3px 20px 0 0;
+}
+
+.main__date span:first-child {
+    display: block;
+    height: 40px; 
+    width: 70px;
+    background-color: #313352;
+    color: #e7cc00;
+    text-align: center;
+    font-size: 23px;
+    font-family: "Fjalla One";
+    text-transform: uppercase;
+    line-height: 1.9;    
+}
+
+.main__date span:last-child {
+    display: block;
+    height: 30px; 
+    width: 70px;
+    background-color: #e7cc00;
+    color: #313352;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Lato";
+    line-height: 2.4;     
+}
+
+.main__aug {
+    width: 300px;
+    height: 157px;
+    border-bottom: 1px solid #262033;
+}
+
+.main__aug p {
+    margin: 12px 0 -2px 0;
+}
+
+.main__konec h2 {
+    margin-top: 28px;
+    letter-spacing: -0.6px;
+    word-spacing: 0.5px;
+}
+
+.main__aug08 h4, .main__aug09 h4 {
+    margin-top: 27px;
+}
+
+.main__contacts h2 {
+    font-size: 23px;
+    margin-top: 10px;
+    color: #e7cc00;
+    margin-bottom: 14px;
+}
+
+table {
+    height: 100px;
+    width: 300px;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #262033;
+}
+
+tr:last-child {
+    border: none;
+}
+
+tr td:first-child {
+    width: 20px;
+    height: 32px;
+    border-right: 1px solid #262033;
+}
+
+tr td:last-child {
+    padding-left: 13px;
+}
+
+.main__history input {
+    height: 35px;
+    width: 80px;
+    font-size: 14px;
+    font-family: "Fjalla One";
+    color: rgb(231, 204, 0);
+    text-transform: uppercase;
+    line-height: 1.714;  
+    background-color: #313352; 
+    border: none;   
+}
+
+.main__info i {
+    color: #e7cc00;
+    font-size: 14px;
+    font-family: "FontAwesome";
+    text-transform: uppercase;
+    line-height: 1.2;     
+}
+
+td a {
+    text-decoration: none; 
+}
+
+td a:hover {
+    cursor: pointer;
+    color: #e7cc00;
+}
+
+.main__history input:hover {
+    cursor: pointer;
+    background-color: #5a5c7565;
+}
+
+.main__fusce, .main__donec {
+    margin-top: 10px;
+    height: 220px;
+}
+
+.main__fusce p {
+    margin-top: 18px;
+}
+
+.main__fusce input {
+    margin-top: 5px;
+}
+
+.main__donec {
+    border: none;
+}
+
+.main__donec p {
+    margin-top: 23px;
+    margin-bottom: 16px;
+
+}
+
+.main__donec h2 {
+    margin-top: -3px;
+    margin-bottom: 20px;
+}
+
+.main__user-search, .main__user-konec, .main__user-morbin {
+    width: 300px;
+    margin-left: 34px;
+}
+
+.main__user input, .main__user-message{
+    background-color: transparent;
+    border: 2px solid #313352;
+}
+
+.main__user-search  h2{
+    margin: 28px 0 15px 0;
+    letter-spacing: -0.5px;
+}
+
+.main__user-search input {
+    height: 40px;
+    width: 300px;
+    padding-left: 9px;
+}
+
+.main__user-search i {
+    position: relative;
+    top: -30px;
+    left: 275px;
+    font-size: 18px;
+}
+
+.main__user-konec  h2, .main__user-morbin h2 {
+    margin: 17px 0 21px 0;
+    letter-spacing: -0.67px;
+    word-spacing: 1px;
+}
+
+.main__user-konec span {
+    display: block;
+    width: 300px;
+    height: 35px;
+    border-bottom: 1px solid #262033;
+}
+
+.main__user-konec span:last-child {
+    border: none;
+}
+
+.main__user-morbin h2 {
+    margin: 22px 0 26px 0;
+}
+
+.main__user-form input, .main__user-message {
+    height: 35px;
+    width: 288px;
+    margin-bottom: 19px;
+    padding-left: 9px;
+}
+
+.main__user-message {
+    padding-top: 7px;
+    height: 136px;
+    margin-bottom: 17px;
+}
+
+.main__user-morbin button {
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    font-family: "Fjalla One";
+    color: rgb(49, 51, 82);
+    text-transform: uppercase;
+    line-height: 1.333;  
+    background-color: #e7cc00;
+    border: none;
+    padding: 4px 0 0 2px;   
+}
+
+.main__user-morbin button:hover {
+    cursor: pointer;
+    background-color: #ae9a41;
+}
+
 .footer {
     width: 1170px;
     height: 115px;
