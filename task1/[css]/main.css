@@ -100,9 +100,9 @@ body {
     border-right: 2px solid #e8d64d !important;
 }
 
-.header__nav a:hover {
+.header__nav a:hover, .main__middle input:hover {
     cursor: pointer;
-    background-color: #9b8a0759;
+    background-color: #91831c86;
 }
 
 .main {
@@ -248,7 +248,7 @@ body {
 }
 
 .main__middle input {
-    background-color: #dec400;
+    background-color: #e7cc00;
     width: 90px;
     height: 36px;
     font-size: 15px;
