@@ -23,7 +23,6 @@ body {
 /*--------HEADER---------*/
 .header {
     width: 1170px;
-    height: 320px;
     margin: 0 auto;
     margin-top: 97px;   
 }
@@ -333,7 +332,7 @@ body {
     margin-bottom: 10px; 
 }
 
-.main__about p, .main__user span, .main__user input, tr td:last-child, .main__user-message {
+.main__about p, .main__user span, .main__user input, tr td:last-child, .main__user-message, td a {
     font-size: 14px;
     font-family: "Lato";
     color: rgb(119, 121, 134);
@@ -374,7 +373,7 @@ body {
 
 .main__aug {
     width: 300px;
-    height: 157px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #262033;
 }
 
@@ -567,7 +566,6 @@ td a:hover {
 /*--------FOOTER---------*/
 .footer {
     width: 1170px;
-    height: 115px;
     margin: 0 auto;
     
 }
@@ -594,4 +592,73 @@ td a:hover {
     font-size: 22px;
     letter-spacing: 1.3px;
     color: rgb(231, 204, 0);
+}
+
+body {
+    width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header, .header__menu, .main, .footer {
+        width: 100%;
+    }
+
+    .header {
+        margin-top: 50px;
+    }
+
+    .main {
+        height: 2740px;
+    }
+
+    .main__preview, .main__info {
+        display: flex;
+        width: 500px;
+        height: 760px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main__middle, .main__aside1, .main__aside2, .main__preview, .main__info {
+        margin: 0 auto;
+    }
+
+    .main__aside1, .main__aside2, .main__about, .main__user {
+        order: 1;
+        width: 250px;
+    }
+
+    .main__search {
+        margin-left: 216px !important;
+    }
+
+    .main__info {
+        height: 1980px;
+    }
+
+    .main__aug, table, .main__user input, .main__user textarea, .main__user-konec span, .main__user-form {
+        max-width: 240px;
+        
+    }
+
+    .main__user-konec span {
+        padding: 5px 0;
+    }
+
+    .main__user-search, .main__user-konec, .main__user-morbin {
+        margin-left: 10px;
+    }
+
+    .main__user-search i {
+        position: relative;
+        left: -10%;
+        top: 1%;
+    }
 }
