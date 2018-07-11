@@ -41,6 +41,10 @@ body {
     text-decoration: none;
 }
 
+.header_mobile {
+    display: none;
+}
+
 .header__logo-link:hover {
     cursor: pointer;
 }
@@ -99,7 +103,7 @@ body {
     border-right: 2px solid #e8d64d !important;
 }
 
-.header__nav a:hover, .main__middle input:hover {
+.header__nav a:hover, .main__middle input:hover, .header_mobile-link:hover {
     cursor: pointer;
     background-color: #91831c86;
 }
@@ -125,7 +129,7 @@ body {
 }
 
 .main__bird, .main__jesus, .main__church, .main__glass {
-    height: 189.7px;
+    height: 190px;
     background-color: #313352;
 }
 
@@ -220,7 +224,6 @@ body {
 }
 
 .main__middle .main__slogan {
-    height: 150px;
     width: 300px;
     vertical-align: bottom;
     margin: 0 auto;
@@ -277,7 +280,6 @@ body {
     line-height: 1.2; 
     letter-spacing: -0.5px;
     margin-bottom: 0px;
-    height: 23px;
 }
 
 .main__history p {
@@ -598,7 +600,7 @@ body {
     width: 100%;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 
     body {
         display: flex;
@@ -643,9 +645,13 @@ body {
         height: 1980px;
     }
 
-    .main__aug, table, .main__user input, .main__user textarea, .main__user-konec span, .main__user-form {
-        max-width: 240px;
+    .main__aug, table, .main__user input, .main__user-konec span, .main__user-form, .main__user-morbin {
+        width: 240px;
         
+    }
+
+    .main__user-form input, .main__user textarea {
+        width: 228px;
     }
 
     .main__user-konec span {
@@ -661,4 +667,171 @@ body {
         left: -10%;
         top: 1%;
     }
+}
+
+@media (min-width: 412px) and (max-width: 767px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 390px;
+    }
+
+    .header, .main, .footer {
+        width: 390px;
+    }
+
+    .header__logo, .main__preview, .main__info {
+        width: 390px;
+    }
+
+    .header_desktop {
+        display: none;
+    }
+
+    .header__menu {
+        height: 58px;
+        width: 390px;
+    }
+
+    .header_mobile {
+        display: block;
+        height: 54px;
+        border: 2px solid #e8d64d;
+    }
+
+    .header_mobile-link {
+        background-color: #dbc307;
+        text-decoration: none;
+        border-left: 2px solid #e8d64d;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+        position: relative;
+        left: 335px;
+    }
+
+    .header_mobile-p {
+        border: 2px solid rgb(92, 85, 85);
+        margin: 2px;
+        
+    }
+
+    .header__logo-link, .header {
+        margin-top: 0;
+    }
+
+    .header__logo-link, .header__logo {
+        height: 140px;
+    }
+
+    .header__logo-link h1 {
+        font-size: 18px;
+    }
+
+    .header__logo-img {
+        width: 70px;
+        height: 80px;
+        padding-top: 10px;
+    }
+
+    .main {
+        height: 3520px;
+    }
+
+    .main__preview, .main__info {
+        display: flex;
+        height: 760px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main__middle {
+        background: url(../[pictures]/Tile/cross.png) no-repeat -40px;
+    }
+
+    .main__history {
+        height: 1100px !important;
+    }
+
+    .main__middle, .main__aside1, .main__aside2, .main__preview, .main__info {
+        margin: 0 auto;
+    }
+
+    .main__aside1, .main__aside2, .main__about, .main__user {
+        order: 1;
+        width: 195px;
+    }
+
+    .main__about, .main__user, .main__aug {
+        width: 400px;
+    }
+
+    .main__search {
+        position: relative;
+        right: 140px;
+    }
+
+    .main__info {
+        height: 2800px;
+    }
+
+    .main__about, .main__user {
+        height: 830px;
+    }
+
+    .main__user-search h2 {
+        margin-top: 0;
+    }
+
+    .main__egestas, .main__fusce, .main__donec {
+        width: 320px;
+        height: 32%;
+    }
+
+    .main__fusce {
+        height: 21%;
+    }
+
+    .main__donec-img {
+        width: 320px;
+    }
+
+    .main__aug, table, .main__user-konec span, .main__user-form, .main__user-morbin, .main__user-konec, .main__user-search {
+        width: 390px; 
+    }
+
+    tr  {
+        width: 90px;
+    }
+
+    .main__user-form {
+        height: 400px;
+    }
+
+    .main__about h2, .main__user, .main__user-form {
+        text-align: center;
+    }
+
+    .main__user-form input, .main__user textarea, .main__user input {
+        width: 228px;
+    }
+
+    .main__user button, .main__user-search input {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .main__user-search, .main__user-konec, .main__user-morbin {
+        margin-left: 0;
+    }
+
+    .main__user-search i {
+        position: relative;
+        left: 100px;
+        top: -30px;
+    }
+
 }
