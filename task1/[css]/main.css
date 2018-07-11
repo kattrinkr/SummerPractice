@@ -68,7 +68,6 @@ body {
 }
 
 .header__menu {
-    width: 1170px;
     height: 100px;
     margin: 0 auto;
     background-color: rgb(231, 204, 0);
@@ -80,7 +79,7 @@ body {
     margin: 0 auto;
 }
 
-.header__nav a {
+.header__nav-link {
     width: 98px;
     height: 98px;
     display: block;
@@ -99,11 +98,11 @@ body {
     letter-spacing: 0.05px;
 }
 
-.header__nav-contact {
+.header__nav-link:last-child {
     border-right: 2px solid #e8d64d !important;
 }
 
-.header__nav a:hover, .main__middle input:hover, .header_mobile-link:hover {
+.header__nav-link:hover, .main__middle-button:hover, .header_mobile-link:hover {
     cursor: pointer;
     background-color: #91831c86;
 }
@@ -131,6 +130,7 @@ body {
 .main__bird, .main__jesus, .main__church, .main__glass {
     height: 190px;
     background-color: #313352;
+    overflow: hidden;
 }
 
 .main__middle {
@@ -141,15 +141,15 @@ body {
     background-color: #272946;
 }
 
-.main__preview .main__search {
+.main__search {
     background-color: #5a5c75;
     height: 34px;
-    width: 34px;
-    margin-left: 301px; 
+    border: none;
+    margin-left: 299px; 
     margin-bottom: 23px; 
 }
 
-.main__preview .main__search:hover {
+ .main__search:hover {
     cursor: pointer;
     background-color: #2c4d5a2c;
 }
@@ -159,35 +159,35 @@ body {
     color: #adaeba;
     font-family: "FontAwesome"; 
     display: block;
-    padding: 8px;
+    padding: 4px;
 }
 
-.main__preview img {
+.main__preview-img {
     margin-left: 32px;
     width: 50px;
     height: 50px;
 } 
 
-.main__jesus img {
+.main__jesus-img {
     margin-left: 30px;
     height: 52px;
     width: 60px;
 }
 
-.main__church img {
+.main__church-img {
     margin-left: 28px;
     height: 52px;
     width: 40px;
 }
 
-.main__glass img {
+.main__glass-img {
     margin-left: 32px;
     height: 50px;
     width: 28px;
     margin-top: -2px;
 }
 
-.main__preview p {
+.main__preview-p {
     font-size: 15px;
     font-family: 'Lato Regular';
     color: rgb(231, 204, 0);
@@ -198,7 +198,7 @@ body {
     padding-left: 30px;
 }
 
-.main__preview h2 {
+.main__preview-h2 {
     font-size: 22px;
     font-family: "Fjalla One";
     color: rgb(231, 204, 0);
@@ -223,14 +223,14 @@ body {
     letter-spacing: -0.9px;
 }
 
-.main__middle .main__slogan {
+.main__slogan {
     width: 300px;
     vertical-align: bottom;
     margin: 0 auto;
     margin-top: 255px;
 }
 
-.main__middle h2, .main__middle h3 {
+.main__middle-h2, .main__middle-h3 {
     font-size: 22px;
     font-family: "Fjalla One";
     color: rgb(255, 255, 255);
@@ -244,12 +244,12 @@ body {
     padding-left: 2px;
 }
 
-.main__middle h3 {
+.main__middle-h3 {
     font-size: 18px;
     margin-top: 3px;
 }
 
-.main__middle input {
+.main__middle-button {
     background-color: #e7cc00;
     width: 90px;
     height: 36px;
@@ -272,7 +272,7 @@ body {
     background-color: rgb(231, 204, 0);
 }
 
-.main__history h2 {
+.main__history-h2 {
     font-size: 24px;
     font-family: "Fjalla One";
     color: rgb(49, 51, 82);
@@ -282,7 +282,7 @@ body {
     margin-bottom: 0px;
 }
 
-.main__history p {
+.main__history-p {
     font-size: 14px;
     font-family: "Lato";
     color: rgb(81, 84, 110);
@@ -312,11 +312,15 @@ body {
     margin: -13px;
 }
 
+.main__egestas h2+p {
+    margin: 8px;
+}
+
 .main__egestas p+p {
-    margin-bottom: 17px;
+    margin: 22px 0 17px 0;
 } 
 
-.main__about h2, .main__user h2 {
+.main__about-h2, .main__user-h2 {
     font-size: 24px;
     font-family: "Fjalla One";
     color: rgb(255, 255, 255);
@@ -324,7 +328,7 @@ body {
     line-height: 1.2;
 }
 
-.main__info h4 {
+.main__about-h4 {
     font-size: 14px;
     font-family: "Lato";
     color: rgb(231, 204, 0);
@@ -334,7 +338,7 @@ body {
     margin-bottom: 10px; 
 }
 
-.main__about p, .main__user span, .main__user input, tr td:last-child, .main__user-message, td a {
+.main__about-p, .main__user-span, .main__user-input, tr td:last-child, .main__user-message, td a {
     font-size: 14px;
     font-family: "Lato";
     color: rgb(119, 121, 134);
@@ -361,7 +365,7 @@ body {
     line-height: 1.9;    
 }
 
-.main__date span:last-child {
+.main__date-span:last-child {
     display: block;
     height: 30px; 
     width: 70px;
@@ -424,7 +428,7 @@ tr td:last-child {
     padding-left: 13px;
 }
 
-.main__history input {
+.main__history-button {
     height: 35px;
     width: 80px;
     font-size: 14px;
@@ -453,7 +457,7 @@ td a:hover {
     color: #e7cc00;
 }
 
-.main__history input:hover {
+.main__history-button:hover {
     cursor: pointer;
     background-color: #5a5c7565;
 }
@@ -463,11 +467,7 @@ td a:hover {
     height: 220px;
 }
 
-.main__fusce p {
-    margin-top: 18px;
-}
-
-.main__fusce input {
+.main__fusce .main__history-button {
     margin-top: 5px;
 }
 
@@ -483,7 +483,7 @@ td a:hover {
 
 .main__donec h2 {
     margin-top: -3px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .main__user-search, .main__user-konec, .main__user-morbin {
@@ -515,24 +515,25 @@ td a:hover {
 }
 
 .main__user-konec  h2, .main__user-morbin h2 {
-    margin: 17px 0 21px 0;
+    margin: 17px 0 16px 0;
     letter-spacing: -0.67px;
     word-spacing: 1px;
 }
 
-.main__user-konec span {
+.main__user-span {
     display: block;
+    padding: 5px 0;
     width: 300px;
-    height: 35px;
+    height: 25px;
     border-bottom: 1px solid #262033;
 }
 
-.main__user-konec span:last-child {
+.main__user-span:last-child {
     border: none;
 }
 
 .main__user-morbin h2 {
-    margin: 22px 0 26px 0;
+    margin: 27px 0 26px 0;
 }
 
 .main__user-form input, .main__user-message {
@@ -572,7 +573,7 @@ td a:hover {
     
 }
 
-.footer p, .footer h2 {
+.footer-p, .footer-h2 {
     font-size: 15px;
     font-family: 'Fjalla One';
     color: rgb(119, 121, 134);
@@ -581,23 +582,19 @@ td a:hover {
     margin: 0;
 }
 
-.footer p:first-child {
+.footer-p:first-child {
     padding-top: 24px;
 }
 
-.footer p:nth-child(2) {
+.footer-p:nth-child(2) {
     display: block;
     height: 16px;
 }
 
-.footer h2 {
+.footer-h2 {
     font-size: 22px;
     letter-spacing: 1.3px;
     color: rgb(231, 204, 0);
-}
-
-body {
-    width: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -638,24 +635,26 @@ body {
     }
 
     .main__search {
-        margin-left: 216px !important;
+        position: relative;
+        right: 85px;
     }
 
     .main__info {
         height: 1980px;
     }
 
-    .main__aug, table, .main__user input, .main__user-konec span, .main__user-form, .main__user-morbin {
+    .main__aug, table, .main__user input, .main__user-span, .main__user-form, .main__user-morbin {
         width: 240px;
         
     }
 
-    .main__user-form input, .main__user textarea {
+    .main__user-form input, .main__user-message {
         width: 228px;
     }
 
-    .main__user-konec span {
+    .main__user-span {
         padding: 5px 0;
+        height: 35px;
     }
 
     .main__user-search, .main__user-konec, .main__user-morbin {
@@ -689,6 +688,11 @@ body {
         display: none;
     }
 
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .header__menu {
         height: 58px;
         width: 390px;
@@ -716,15 +720,19 @@ body {
     .header_mobile-p {
         border: 2px solid rgb(92, 85, 85);
         margin: 2px;
-        
+    }
+
+    .header__logo {
+        height: 140px;
     }
 
     .header__logo-link, .header {
         margin-top: 0;
     }
 
-    .header__logo-link, .header__logo {
+    .header__logo-link {
         height: 140px;
+        margin-bottom: 0;
     }
 
     .header__logo-link h1 {
@@ -738,7 +746,7 @@ body {
     }
 
     .main {
-        height: 3520px;
+        height: 3560px;
     }
 
     .main__preview, .main__info {
@@ -770,8 +778,8 @@ body {
     }
 
     .main__search {
-        position: relative;
-        right: 140px;
+        display: block;
+        margin-left: 158px;
     }
 
     .main__info {
@@ -799,11 +807,11 @@ body {
         width: 320px;
     }
 
-    .main__aug, table, .main__user-konec span, .main__user-form, .main__user-morbin, .main__user-konec, .main__user-search {
+    .main__aug, table, .main__user-span, .main__user-form, .main__user-morbin, .main__user-konec, .main__user-search {
         width: 390px; 
     }
 
-    tr  {
+    tr {
         width: 90px;
     }
 
@@ -815,7 +823,7 @@ body {
         text-align: center;
     }
 
-    .main__user-form input, .main__user textarea, .main__user input {
+    .main__user-form input, .main__user-message, .main__user input {
         width: 228px;
     }
 
@@ -833,5 +841,4 @@ body {
         left: 100px;
         top: -30px;
     }
-
 }
