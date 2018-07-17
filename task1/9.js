@@ -11,9 +11,11 @@ const videos = [{
     "id": 654356453,
     "title": "Bad Boys"
 }];
+
 let initialValue = {};
-let answer = videos.reduce(function(a, b) {
-    initialValue[b['id']] = b['title'];
+let answer = videos.reduce(function(a, b) { //Giving an empty object like initialValue and creating fields for 
+    initialValue[b['id']] = b['title'];     //him
     return initialValue;
 }, initialValue);
+
 console.log(answer);

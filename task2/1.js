@@ -16,8 +16,12 @@ console.log(add.bind(voltron)('drinking', 'beer'));
 
 function showName() {
     setTimeout(function() {
-        console.log(name)
-    }, 0);
-};
+        console.log(name);
+        console.log(this.name);
+        console.log(this['name']);
+        console.log(voltron.name);
+        console.log(voltron['name']);
+    }, 1000);
+}
 
 showName();

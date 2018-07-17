@@ -1,4 +1,4 @@
-var movieLists = [{
+const movieLists = [{
     name: "Instant Queue",
     videos : [
        {"id": 70111470,
@@ -67,37 +67,54 @@ var movieLists = [{
         "url": "http://api.netflix.com/catalog/titles/movies/70111470",
         "rating": 5.0,
         "bookmark": [{ id: 432534, time: 65876586 }]
-        }]
-    }];
-    let links = [];
-let answer = movieLists.map(function(x) { return modify(x)});
+     }]
+}];
+
+let links = [];
+let a = false;
+let b = false;
+
+let answer = movieLists.map(function(x) { 
+  for (let key in x) {
+    if (typeof x[key] === 'object') {
+      let temp = x[key];
+      return modify(temp);
+    }
+  }
+}).concat(movieLists.map(function(x) { //Concating 2 arrays by 'modify' call
+  for (let key in x) {
+    if (typeof x[key] === 'object') {
+      let temp = x[key];
+      return modify(temp);
+    }
+  }
+}));
 console.log(answer);
 
-function modify(o) {
-    //console.log(o);
-    let obj = {};
-    for (let key in o) {
-        if (typeof o[key] === 'object') {
-            let temp = o[key];
-            //console.log(temp.length);
-            
-            for (let i = 0; i < temp.length; i++) {
-                //console.log(temp[1]);
-                let link = temp[i].boxarts.filter(x => (x.width === 150 && x.height === 200));
-                links.push(link[0].url);
-                for (let k in temp[i]){
-                  if (k === 'id') {
-                    obj[k] = temp[i].id;
-                  }
-                  if (k === 'title') {
-                    obj[k] = temp[i].title;
-                  } 
-                }
-                obj['boxart'] = links.pop();
-                //console.log(obj);
-            }
-            return obj;
-        }
+function modify(temp) {
+  let obj = {};;
+  for (let i = 0; i < temp.length; i++) {
+    let link = temp[i].boxarts.filter(x => (x.width === 150 && x.height === 200)); //To find objects with params 150x200
+    links.push(link[0].url); //Array with URL links
+    for (let k in temp[i]){
+      if (k === 'id') {
+        obj[k] = temp[i].id; //Creating 'id' field of new object
+      }
+      if (k === 'title') {
+        obj[k] = temp[i].title; //Creating 'title' field of new object
+      } 
     }
-    
+    obj['boxart'] = links.pop(); //Creating 'boxart' field of new object
+    if (a === false && b === false) { //Some magic to return a necessary object :(
+      a = true;
+      return obj;
+    }
+  }
+  if (a === true){ //Some magic to return a necessary object :(
+    if (b === true) {
+      a = false;
+      b = false;
+    } else b = true;
+    return obj; 
+  }
 }

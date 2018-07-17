@@ -16,18 +16,17 @@ const boxarts = [{
     url: "http://cdn-0.nflximg.com/images/2891/Fracture425.jpg"
 }];
 
-/**/
-let temp = boxarts.map(x => x.width*x.height);
-console.log(temp);
+let temp = boxarts.map(x => x.width*x.height); //We will get array with area of boxart
+//console.log(temp);
 
-let answerArea = temp.reduce(function(a, b) {
+let answerArea = temp.reduce(function(a, b) { //We will get the biggest area from array
     if (a > b) return a;
     else return b
 });
-console.log(answerArea);
+//console.log(answerArea);
 
-let answer = boxarts.filter(x => x.width*x.height >= answerArea);
-console.log(answer);
+let answer = boxarts.filter(x => x.width*x.height >= answerArea); //Return the object with the biggest area
+//console.log(answer);
 
-let answerURL = answer[0].url;
+let answerURL = answer[0].url; //URL of the object with the biggest area
 console.log(answerURL);

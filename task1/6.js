@@ -1,17 +1,17 @@
 Array.prototype.reduce = function(combiner, initialValue) {
-    var arr = this,
-    arrLen = arr.length,
-    k = 0,
-    accumulator = initialValue === undefined ? undefined : initialValue;
-
-for(;k < arrLen;k++) {
-    if (accumulator !== undefined && k in arr) {
-        accumulator = combiner.call(undefined, accumulator, arr[k], k, arr);
-    } else {
-        accumulator = arr[k];
+    let Arr = this;
+    let len = Arr.length;
+    accumulator = initialValue === undefined ? undefined : initialValue; //Check of having initialValue
+  
+    for(let i = 0; i < len; i++) {
+      if (accumulator !== undefined && i in Arr) {
+          accumulator = combiner.apply(undefined, [accumulator, Arr[i], i, Arr]);
+      } else {
+          accumulator = Arr[i]; //The first value will be here (will be initial in the next step)
+        }
     }
-}
-return accumulator;
-}
-console.log([1,2,3].reduce(function(memo, item) { return memo + item; }) === 6);
-console.log([1,2,3].reduce(function(memo, item) { return memo + item; }, 10) === 16);
+    return accumulator;
+  }
+  
+  console.log([1,2,3].reduce(function(memo, item) { return memo + item; }) === 6);
+  console.log([1,2,3].reduce(function(memo, item) { return memo + item; }, 10) === 16);

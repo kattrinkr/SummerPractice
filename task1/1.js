@@ -1,35 +1,27 @@
-Array.prototype.map = function(callback) {
-  var T, A, k;
+Array.prototype.map = function(projectionFunction) {
+  let T, Arr;
   if (this == null) {
     throw new TypeError('this is null or not defined');
   }
-  //console.log('this  '+this);
-  var O = Object(this);
-  //console.log('Object(this)  '+O);
-  var len = O.length >>> 0;
-  //console.log('O.length >>> 0  '+len);
-  if (typeof callback !== 'function') {
-    throw new TypeError(callback + ' is not a function');
+  let Obj = Object(this); //Creating object with array params
+  let len = Obj.length; //Count of params
+  if (typeof projectionFunction !== 'function') {
+    throw new TypeError(projectionFunction + ' is not a function');
   }
   if (arguments.length > 1) {
-    T = arguments[1];
+    T = arguments[1]; //If there is some argument
   }
-  //console.log('arguments[1]  '+T);
-  A = new Array(len);
-  //console.log('A'+A);
-  k = 0;
-  while (k < len) {
-    var kValue, mappedValue;
-    if (k in O) {
-      kValue = O[k];
-      mappedValue = callback.call(T, kValue, k, O);
-      //console.log('mappedValue  '+mappedValue);
-      A[k] = mappedValue;
+  Arr = new Array(len); //We will save here modified array
+  for (let i = 0; i < len; i++) {
+    var iValue, mappedValue;
+    if (i in Obj) {
+      iValue = Obj[i];
+      mappedValue = projectionFunction.apply(T, [iValue, i, Obj]);
+      Arr[i] = mappedValue;
     }
-    k++;
   }
-  console.log(A);
-  return A;
+  console.log(Arr);
+  return Arr;
 };
-//let answer = [1,2,3].map(function(x) { return x + 1; });
+
 console.log(JSON.stringify([1,2,3].map(function(x) { return x + 1; })) === '[2,3,4]');
