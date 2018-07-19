@@ -28,15 +28,9 @@ const newReleases = [{
   "bookmark": [{ id: 432534, time: 65876586 }]
 }];
 
-let temp = newReleases.filter(x => { //We will get all objects with 'rating = 5'
-for (let key in x) {
-  if (key === 'rating' && JSON.parse(x[key]) === 5) {
-    return x;
-  }
-}
-});
-
+let temp = newReleases.filter(item => (JSON.parse(item.rating) === 5)); //We will get all objects with 'rating = 5'
 let answer = [];
+
 for (let i = 0; i < temp.length; i++) { //Get id's of obj's
 answer.push(temp[i].id);
 }

@@ -29,16 +29,10 @@ const newReleases = [{
   "bookmark": [{ id: 432534, time: 65876586 }]
   }];
 
-let answer = newReleases.map(function(x) { 
-  let temp = {}; //Creating of temporary object for saving specified fields 
-  for (let key in x){ //Pass through object fields
-    if (key === 'id') {
-      temp.id = x.id;
-    }
-    if (key === 'title') {
-      temp.title = x.title;
-    }
-  }
-  return temp;
+let answer = newReleases.map(function(item) { 
+  let temporary = {}; //Creating of temporary object for saving specified fields 
+  temporary.id = item.id;
+  temporary.title = item.title;
+  return temporary;
 });
 console.log(answer);

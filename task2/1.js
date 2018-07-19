@@ -14,14 +14,14 @@ console.log(add.call(voltron, 1, 2));
 console.log(add.apply(voltron, [20, 30]));
 console.log(add.bind(voltron)('drinking', 'beer'));
 
-function showName() {
-    setTimeout(function() {
-        console.log(name);
-        console.log(this.name);
-        console.log(this['name']);
-        console.log(voltron.name);
-        console.log(voltron['name']);
-    }, 1000);
-}
 
+let showName = function () { 
+  let temp = this;
+  setTimeout(function time() {
+    console.log(this.name);
+    console.log(temp.name);   
+    console.log(voltron.name);
+  }.call(this), 1000);
+}.bind(voltron);
+  
 showName();

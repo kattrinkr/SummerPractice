@@ -16,7 +16,7 @@ const boxarts = [{
     url: "http://cdn-0.nflximg.com/images/2891/Fracture425.jpg"
 }];
 
-let temp = boxarts.map(x => x.width*x.height); //We will get array with area of boxart
+let temp = boxarts.map(item => item.width*item.height); //We will get array with area of boxart
 //console.log(temp);
 
 let answerArea = temp.reduce(function(a, b) { //We will get the biggest area from array
@@ -25,7 +25,7 @@ let answerArea = temp.reduce(function(a, b) { //We will get the biggest area fro
 });
 //console.log(answerArea);
 
-let answer = boxarts.filter(x => x.width*x.height >= answerArea); //Return the object with the biggest area
+let answer = boxarts.filter(item => item.width*item.height >= answerArea); //Return the object with the biggest area
 //console.log(answer);
 
 let answerURL = answer[0].url; //URL of the object with the biggest area

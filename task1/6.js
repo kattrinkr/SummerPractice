@@ -1,13 +1,12 @@
 Array.prototype.reduce = function(combiner, initialValue) {
-    let Arr = this;
-    let len = Arr.length;
+    let length = this.length;
     accumulator = initialValue === undefined ? undefined : initialValue; //Check of having initialValue
   
-    for(let i = 0; i < len; i++) {
-      if (accumulator !== undefined && i in Arr) {
-          accumulator = combiner.apply(undefined, [accumulator, Arr[i], i, Arr]);
+    for(let i = 0; i < length; i++) {
+      if (accumulator !== undefined) {
+          accumulator = combiner(accumulator, this[i]);
       } else {
-          accumulator = Arr[i]; //The first value will be here (will be initial in the next step)
+          accumulator = this[i]; //The first value will be here (will be initial in the next step)
         }
     }
     return accumulator;
