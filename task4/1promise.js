@@ -2,7 +2,7 @@ function delay(duration){
     let promise;
     return promise = new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve("result");
+        resolve('');
       }, duration);
     })
   }

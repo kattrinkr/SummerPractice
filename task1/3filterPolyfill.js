@@ -1,10 +1,9 @@
 Array.prototype.filter = function(predicateFunction) {
   let array = [];
-  let length = this.length; //Count of params
   if (typeof predicateFunction !== 'function') {
     throw new TypeError(predicateFunction + ' is not a function');
   }
-  for (var i = 0; i < length; i++) {
+  for (let i in this) {
     let filterValue = predicateFunction(this[i], i);
       if (filterValue) {
         array.push(this[i]);

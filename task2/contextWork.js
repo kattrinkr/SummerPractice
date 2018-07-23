@@ -16,12 +16,13 @@ console.log(add.bind(voltron)('drinking', 'beer'));
 
 
 let showName = function () { 
-  let temp = this;
+  const CONTEXT = this; //№1 By binding the context to a variable
   setTimeout(function time() {
     console.log(this.name);
-    console.log(temp.name);   
-    console.log(voltron.name);
-  }.call(this), 1000);
+    console.log(CONTEXT.name);   
+    console.log(voltron.name); //№3 By access to the 'voltron'
+  }.bind(this), 1000); //№2 By binding the context to a timeout function
 }.bind(voltron);
+//№4 arrow function  in the setTimeout
   
 showName();

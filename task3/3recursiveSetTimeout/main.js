@@ -1,15 +1,15 @@
-const but = document.querySelector('#but');
-let min = 1;
-let max = 4;
+const BUT = document.querySelector('#but');
+const MIN = 1;
+const MAX = 4;
 let id;
 
-but.addEventListener("click", (event) => {
+BUT.addEventListener("click", (event) => {
   if (id) { //Turning off the recursive timeout
     clearTimeout(id);
     id = 0;
   } else {
     id = setTimeout(function message() {
-      let seconds = Math.floor(Math.random() * (max - min + 1)) + min; //Integer from [1,4]
+      let seconds = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN; //Integer from [1,4]
       console.log(`You can see message after ${seconds} seconds`);
       id = setTimeout(message, seconds * 1000);
     }, 0);

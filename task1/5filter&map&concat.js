@@ -70,44 +70,18 @@ const movieLists = [{
    }]
 }];
 
-let links = [];
-let a = false;
-let b = false;
+let answer = movieLists
+  .map(item => item.videos)
+  .reduce((memo,item) => memo.concat(item))
+  .map(item => {
+    let boxarts = item.boxarts
+      .filter(item => item.width === 150 && item.height === 200)
+      .reduce((memo, item) => item);
+    return {
+      id: item.id,
+      title: item.title,
+      boxart: boxarts.url
+    }
+  });
 
-let answer = movieLists.map(function(item) { 
-return mapped(item);
-}).concat(movieLists.map(function(item) { //Concating 2 arrays by 'modify' call
-return mapped(item);
-}));
 console.log(answer);
-
-function modify(temp) {
-let obj = {};;
-for (let i = 0; i < temp.length; i++) {
-  let link = temp[i].boxarts.filter(item => (item.width === 150 && item.height === 200)); //To find objects with params 150x200
-  links.push(link[0].url); //Array with URL links
-  obj.id = temp[i].id; //Creating 'id' field of new object
-  obj.title = temp[i].title; //Creating 'title' field of new object
-  obj.boxart = links.pop(); //Creating 'boxart' field of new object
-  if (a === false && b === false) { //Some magic to return a necessary object :(
-    a = true;
-    return obj;
-  }
-}
-if (a === true){ //Some magic to return a necessary object :(
-  if (b === true) {
-    a = false;
-    b = false;
-  } else b = true;
-  return obj; 
-}
-}
-
-function mapped(item) {
-for (let key in item) {
-  if (typeof item[key] === 'object') {
-    let temp = item[key];
-    return modify(temp);
-  }
-}
-}

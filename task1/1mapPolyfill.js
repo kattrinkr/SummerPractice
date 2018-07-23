@@ -7,7 +7,7 @@ Array.prototype.map = function(projectionFunction) {
   }
   
   for (let i = 0; i < length; i++) {
-    let mappedValue= projectionFunction(this[i], i);
+    let mappedValue= projectionFunction(this[i], i, this);
     array.push(mappedValue);
   }
   return array;

@@ -1,7 +1,7 @@
-const but = document.querySelector('#but'); 
+const BUT = document.querySelector('#but'); 
 let id;
 
-but.addEventListener("click", (event) => { 
+BUT.addEventListener("click", (event) => { 
     if (id) {
       clearTimeout(id);
     } 

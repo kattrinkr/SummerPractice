@@ -24,15 +24,10 @@ const newReleases = [{
   "title": "Fracture",
   "boxart": "http://cdn-0.nflximg.com/images/2891/Fracture.jpg",
   "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
-  
   "rating": [5.0],
   "bookmark": [{ id: 432534, time: 65876586 }]
-  }];
+}];
 
-let answer = newReleases.map(function(item) { 
-  let temporary = {}; //Creating of temporary object for saving specified fields 
-  temporary.id = item.id;
-  temporary.title = item.title;
-  return temporary;
-});
+let answer = newReleases.filter(item => (JSON.parse(item.rating) === 5)).map(item => item.id);
+ 
 console.log(answer);
